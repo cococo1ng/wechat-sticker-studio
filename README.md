@@ -1,6 +1,6 @@
 # 微信表情包工坊 · WeChat Sticker Studio
 
-> 把一个角色设定，变成一整套能过审的微信表情包。
+> 把一个角色设定，变成一整套拿得去送审的微信表情包。
 > Turn one character sheet into a complete, submission-ready WeChat sticker pack.
 
 [![License: Personal Use Only](https://img.shields.io/badge/license-personal%20use%20only-red.svg)](#版权--license)
@@ -28,10 +28,10 @@ Making a 24-sticker pack: the hard part isn't drawing, it's avoiding rework. Eve
 
 | 返工 / Rework | 原因 / Cause |
 |---|---|
-| 24 张全部重切 | 切图没内缩，格子间的白线被切进图里 / no inset — grid lines cropped into cells |
+| 24 张全部重切 | 切图没内缩，格子间的白线被切进图里 / no inset, so grid lines got cropped into the cells |
 | 角色白肚皮被抠没，重做 | 用"全局删白"去背 / used global white removal instead of flood fill |
 | 传到平台才发现尺寸不对 | 规格没在出图前锁死 / spec not locked before rendering |
-| 送审顺序错，横幅变成第 17 张表情 | 先传了表情 / uploaded stickers before banner |
+| 送审顺序错，横幅变成第 17 张表情 | 先传了表情，后传横幅 / uploaded the stickers before the banner |
 
 这七步存在的意义只有一个：**不让 24 张画完了才发现白做。**
 
@@ -41,15 +41,15 @@ The whole point of the seven steps: **never discover the waste after all 24 are 
 
 ## 七步流程 / The seven steps
 
-```
-1 角色设定卡   character sheet         八项字段，缺一项不写提示词
-2 锚定段       anchor prompt          中英各一段，只写不变的东西
-3 九宫格提示词 grid prompts          三张，每张九个姿态写死
-4 出图         render                先参考图，强度 0.55–0.75
-5 切格/去背/加字 crop, cut out, type  内缩 3.5%，四边泛洪
-6 配套图       companion images      封面/图标/横幅/赞赏图
-7 质检 + 送审  QA and submission      脚本先跑，再交人
-```
+| # | 步骤 | Step | 关键点 |
+|---|---|---|---|
+| 1 | 角色设定卡 | character sheet | 八项字段，缺一项不写提示词 |
+| 2 | 锚定段 | anchor prompt | 中英各一段，只写不变的东西 |
+| 3 | 九宫格提示词 | grid prompts | 三张，每张九个姿态写死 |
+| 4 | 出图 | render | 先传参考图，强度 0.55–0.75 |
+| 5 | 切格 / 去背 / 加字 | crop, cut out, type | 内缩 3.5%，四边泛洪 |
+| 6 | 配套图 | companion images | 封面 / 图标 / 横幅 / 赞赏图 |
+| 7 | 质检 + 送审 | QA and submission | 脚本先跑，再交人 |
 
 每一步的具体参数、正反例、补救句，都在 `references/` 里。
 
@@ -64,7 +64,7 @@ Detailed parameters, good/bad examples and recovery prompts live in `references/
 Drop the folder into your agent's skills directory:
 
 ```bash
-# 先下载或 clone 本仓库，然后 / download or clone this repo first:
+# 先下载或 clone 本仓库 / download or clone this repo first
 
 # Claude Code
 cp -r wechat-sticker-studio ~/.claude/skills/
@@ -103,7 +103,7 @@ Just talk to the agent — no commands to memorize:
 ```
 
 ```
-表情包怎么上架微信？送审顺序是什么？
+表情包送审要注意什么？
 ```
 
 Agent 会先问你四件事（角色是谁、有没有方言梗、16 还是 24 张、用什么工具出图），然后按七步走。
@@ -135,12 +135,12 @@ The agent first asks four questions (who the character is, any dialect catchphra
 python scripts/check_pack.py <表情包目录> --expect 24
 ```
 
-只读 PNG 头，不加载图像库，零依赖。逐张检查尺寸、体积、透明通道、命名补零，输出 PASS / FAIL 表。有一条 FAIL 就退出码 1。
+只读 PNG 头，不加载图像库，零依赖。逐张检查尺寸、体积、透明通道、命名补零，输出 PASS / FAIL 表；只要有一张 FAIL，就以退出码 1 结束。
 
 Reads PNG headers only, no image library, zero dependencies. Checks dimensions, file size, alpha channel and zero-padded naming, then prints a PASS/FAIL table. Exits 1 on any failure.
 
 ```
-FILE              TYPE   SIZE       WEIGHT    ALPHA RESULT
+FILE              TYPE   PIXELS     FILE SIZE ALPHA RESULT
 01.png            MAIN   240x240    18.4KB    yes   PASS
 banner.png        BANNER 750x400    35.6KB    no    PASS
 ```
@@ -155,7 +155,7 @@ banner.png        BANNER 750x400    35.6KB    no    PASS
 
 明确禁止 / Specifically prohibited:
 
-- 接单、代做、代上架、为客户制作 / freelance work, custom production, uploading on behalf of clients
+- 接单、代做、代上架、为客户制作 / freelance work, client production, uploading on behalf of clients
 - 用本 Skill 产出的表情包上架、销售、接受赞赏 / publishing, selling or monetizing output
 - 在付费社群、课程、直播里使用或演示 / use in paid communities, courses or livestreams
 - 转售本包或其改写版、精简版、换皮版 / reselling this package or any derivative
@@ -176,7 +176,7 @@ Attribution required: author @HanShuiYe (Xiaohongshu `cocococo1ng`), work "WeCha
 **寒水烨** · 小红书 `cocococo1ng`
 
 做了四套表情包，把它们踩过的坑整理成了这个 Skill。
-Four sticker packs in, this is the accumulated scar tissue.
+Four sticker packs later, this is the accumulated scar tissue.
 
 ---
 
