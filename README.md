@@ -24,13 +24,13 @@ An Agent Skill in the open Agent Skills format. Once installed, the agent walks 
 
 做一套 24 张的表情包，最费时间的不是画，是返工。下面每一条都是真实踩过的：
 
-Making a 24-sticker pack is not hard to draw — it is hard to avoid rework. Every item below actually happened:
+Making a 24-sticker pack: the hard part isn't drawing, it's avoiding rework. Every item below actually happened:
 
 | 返工 / Rework | 原因 / Cause |
 |---|---|
 | 24 张全部重切 | 切图没内缩，格子间的白线被切进图里 / no inset — grid lines cropped into cells |
 | 角色白肚皮被抠没，重做 | 用"全局删白"去背 / used global white removal instead of flood fill |
-| 传到平台才发现尺寸不对 | 规格没在上色前锁死 / spec not locked before rendering |
+| 传到平台才发现尺寸不对 | 规格没在出图前锁死 / spec not locked before rendering |
 | 送审顺序错，横幅变成第 17 张表情 | 先传了表情 / uploaded stickers before banner |
 
 这七步存在的意义只有一个：**不让 24 张画完了才发现白做。**
