@@ -10,8 +10,8 @@
 
 <img src="docs/preview.png" alt="一套 24 张表情与配套素材的实际交付" width="760">
 
-> **作者跑通了全流程：四套表情包已上架微信表情开放平台。**
-> 这个 Skill 是把那四套的返工记录倒推成的流程——不是教程，是踩坑清单。
+> **作者跑通了全流程：八套表情包已上架微信表情开放平台。**
+> 这个 Skill 是把那八套的返工记录倒推成的流程——不是教程，是踩坑清单。
 > 要商用、要代做，见文末「商业使用」。
 
 ## 这是什么 / What it is
@@ -186,10 +186,10 @@ Attribution required: author @HanShuiYe (Xiaohongshu `cocococo1ng`), work "WeCha
 
 **寒水烨** · 小红书 `cocococo1ng`
 
-**四套表情包已上架微信表情开放平台**，这个 Skill 就是那四套踩过的坑倒推出来的流程。
+**八套表情包已上架微信表情开放平台**，这个 Skill 就是那八套踩过的坑倒推出来的流程。
 有问题、想商用、要我代做，私信我。更新看小红书，GitHub 这里只放流程。
 
-Four sticker packs later, this is the accumulated scar tissue. Questions, commercial use, or done-for-you packs: DM me on Xiaohongshu.
+Eight sticker packs later, this is the accumulated scar tissue. Questions, commercial use, or done-for-you packs: DM me on Xiaohongshu.
 
 ---
 
