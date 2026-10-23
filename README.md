@@ -8,6 +8,12 @@
 
 ---
 
+<img src="docs/preview.png" alt="一套 24 张表情与配套素材的实际交付" width="760">
+
+> **作者跑通了全流程：四套表情包已上架微信表情开放平台。**
+> 这个 Skill 是把那四套的返工记录倒推成的流程——不是教程，是踩坑清单。
+> 要商用、要代做，见文末「商业使用」。
+
 ## 这是什么 / What it is
 
 一个 Agent Skill（Agent Skills 开放格式）。装上之后，AI 会按固定七步帮你做一套表情包：定角色、写锚定段、出九宫格提示词、切格、去背、做配套图、跑质检。
@@ -165,6 +171,11 @@ banner.png        BANNER 750x400    35.6KB    no    PASS
 
 **以上限制不适用于作者本人。** / **These restrictions do not apply to the author.**
 
+> **需要商用授权，或者要我直接帮你做一套？** 小红书 `cocococo1ng` 私信，说明用途即可。
+> 个人学习、自己发一套玩玩，不需要联系我。
+>
+> **Need a commercial license or a done-for-you pack?** DM cocococo1ng on Xiaohongshu. Personal use needs no permission.
+
 引用须注明：作者 @寒水烨（小红书 `cocococo1ng`）· 作品《微信表情包工坊》+ 原链接。
 
 Attribution required: author @HanShuiYe (Xiaohongshu `cocococo1ng`), work "WeChat Sticker Studio", plus the original link.
@@ -175,8 +186,10 @@ Attribution required: author @HanShuiYe (Xiaohongshu `cocococo1ng`), work "WeCha
 
 **寒水烨** · 小红书 `cocococo1ng`
 
-做了四套表情包，把它们踩过的坑整理成了这个 Skill。
-Four sticker packs later, this is the accumulated scar tissue.
+**四套表情包已上架微信表情开放平台**，这个 Skill 就是那四套踩过的坑倒推出来的流程。
+有问题、想商用、要我代做，私信我。更新看小红书，GitHub 这里只放流程。
+
+Four sticker packs later, this is the accumulated scar tissue. Questions, commercial use, or done-for-you packs: DM me on Xiaohongshu.
 
 ---
 
